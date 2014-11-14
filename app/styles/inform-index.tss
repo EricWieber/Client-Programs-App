@@ -1,0 +1,56 @@
+"#topbar": {
+	top: "-10dp",
+	height: "70dp",
+	width: "103%",
+	borderColor: '#fff',
+	borderRadius: "30dp",
+	borderWidth: '2dp',
+	backgroundColor: '#215525'
+},
+"TableView": {
+	backgroundColor: "transparent",
+	top: "60dp"
+},
+"TableViewRow[formFactor=handheld]": {
+	backgroundColor: "transparent",
+	height: '60dp'
+},
+"TableViewRow[formFactor=tablet]": {
+	backgroundColor: "transparent",
+	height: '80dp'
+},
+"Label": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: "10dp",
+	font: {
+		fontSize: 20
+	}
+},
+"#add": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: "10dp",
+	right: "50dp",
+	borderColor: '#fff',
+	borderRadius: '10dp',
+	backgroundColor: '#274429',
+	font: {
+		fontSize: 14
+	}
+},
+"#back": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: "10dp",
+	left: "50dp",
+	borderColor: '#fff',
+	borderRadius: '10dp',
+	backgroundColor: '#274429',
+	font: {
+		fontSize: 14
+	}
+},
+"Window": {
+	backgroundColor: '#163318'
+}

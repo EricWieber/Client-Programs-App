@@ -1,0 +1,11 @@
+<Alloy>
+    <Window id="passwin" title="Enter Password" opacity="0" zIndex="10">
+    	<View backgroundColor="black" opacity="0.9"></View>
+    	<ScrollView>
+    		<Label id="lbl">A password is required to view this area</Label>
+	    	<TextField id="password" returnKeyType="Titanium.UI.RETURNKEY_GO" onReturn="submit" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE"></TextField>
+			<Button id="submit" title="Submit" onClick="submit"></Button>
+			<Button id="cancel" title="Cancel" onClick="cancel"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

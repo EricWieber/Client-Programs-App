@@ -1,0 +1,51 @@
+"Window": {
+	backgroundColor: 'transparent'
+},
+"ScrollView": {
+	layout: 'vertical',
+	backgroundColor: '#163318',
+	height: '30%',
+	width: '60%',
+	borderColor: '#fff',
+	borderRadius: 10
+},
+"TextField": {
+	font: {
+		fontSize: 20
+	},
+	top: '20dp',
+	color: '#000',
+	height: '40dp',
+	width: '80%',
+	borderRadius: '3dp',
+	paddingLeft: '5dp',
+	paddingRight: '5dp',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+},
+"#name": {
+	top: '50dp'
+},
+"#save":{
+	top: '50dp',
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	}
+},
+"#cancel": {
+	top: '50dp',
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	},
+}

@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="addwin" title="Add Client" opacity="0">
+    	<View backgroundColor="black" opacity="0.5"></View>
+    	<ScrollView>
+	    	<TextField id="clientName" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNum" autocorrect="false" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS" ></TextField>
+	    	<TextField id="numbers" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusMes" autocorrect="false" ></TextField>
+	    	<TextField id="message" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" ></TextField>
+			<Button id="save" title="Save" onClick="save"></Button>
+			<Button id="cancel" title="Cancel" onClick="closeWindow"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

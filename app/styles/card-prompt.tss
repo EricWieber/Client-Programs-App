@@ -1,0 +1,36 @@
+"ScrollView[platform=ios formFactor=tablet]": {
+	layout: "vertical",
+	backgroundColor: '#163318',
+	height: '27%',
+	width: '40%',
+	borderColor: '#fff',
+	borderRadius: 10
+},
+"Label": {
+	top: '10%',
+	width: Ti.UI.SIZE,
+	height: "auto",
+	color: "#fff",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+"#prompt": {
+	top: "5%"
+},
+"#yes":{
+	top: "13%",
+	height: "19%",
+	width: "60%",
+	borderColor: '#fff',
+	borderRadius: 10,
+	backgroundColor: '#215525',
+	color: "#ccf"
+},
+"#no":{
+	top: "10%",
+	height: "19%",
+	width: "60%",
+	borderColor: '#fff',
+	borderRadius: 10,
+	backgroundColor: '#215525',
+	color: "#fcc"
+}

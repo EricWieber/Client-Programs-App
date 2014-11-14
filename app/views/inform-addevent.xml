@@ -1,0 +1,10 @@
+<Alloy>
+    <Window id="addwin" title="Add Event" opacity="0">
+    	<View backgroundColor="black" opacity="0.5"></View>
+    	<ScrollView>
+    		<TextField id="eventName" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" ></TextField>
+			<Button id="save" title="Save" onClick="save"></Button>
+			<Button id="cancel" title="Cancel" onClick="closeWindow"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id="win2" title="Events" onFocus="drawTable" backgroundImage="/FisherBackground.png" >
+		<View id="topbar" >
+			<Label id="topTitle">Events</Label>
+			<Button id="add" title="   Add Event   " onClick="addNewEvent"/>
+			<Button id="back" title="  Home  " onClick="closeWindow" />
+			<Button id="refresh" title="Load Events" top="-50dp" />
+		</View>
+		<TableView id="table" onClick="rowClick" backgroundImage="/Fisher-3.png" editable="true" rowHeight="80">
+			<TableViewRow />
+		</TableView>
+		<!-- <Button id="button" onClick="openBlueWindow">Open Blue Window</Button> -->
+	</Window>
+</Alloy>

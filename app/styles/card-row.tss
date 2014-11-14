@@ -1,0 +1,25 @@
+"TableViewRow[formFactor=handheld]": {
+	layout : "horizontal",
+	height: '60dp',
+	color: "#fff"
+},
+"TableViewRow[formFactor=tablet]": {
+	layout : "horizontal",
+	height: '80dp',
+	color: "#fff"
+},
+"#name": {
+	top: '30dp',
+	height: Ti.UI.SIZE,
+	left: '20dp',
+	color: '#fff',
+	font: {
+		fontSize: 20
+	}
+},
+"#check": {
+	image: '/tick_64.png',
+	top: '10dp',
+	left: "20dp",
+	height: '60dp'
+}

@@ -1,0 +1,6 @@
+<Alloy>
+	<TableViewRow id="row" className="row" hasChild="true">
+		<ImageView id="check" visible="false"></ImageView>
+		<Label id="name" />
+	</TableViewRow>
+</Alloy>

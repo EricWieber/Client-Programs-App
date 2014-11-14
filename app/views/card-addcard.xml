@@ -1,0 +1,29 @@
+<Alloy>
+    <Window id="addwin" title="Add Client" opacity="0">
+    	<View backgroundColor="black" opacity="0.5"></View>
+    	<ScrollView>
+    		<TextField id="name" value="" hintText="Full Name" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<TextField id="add1" value="" hintText="Address Line 1" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<TextField id="add2" value="" hintText="Address Line 2" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<TextField id="add3" value="" hintText="Address Line 3" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<View layout="horizontal" height="80dp">
+				<TextField id="city" value="" hintText="City" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+				<TextField id="state" value="" hintText="State" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_ALL" />
+				<TextField id="postcode" class="numbers" value="" hintText="ZIP code" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>
+			<View layout="horizontal" height="60dp">
+				<TextField id="phone" class="numbers" value="" hintText="Phone Number" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+				<TextField id="mobile" class="numbers" value="" hintText="Mobile Number" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>
+			<TextField id="email" value="" hintText="Email Address" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			<View layout="horizontal" height="60dp" top="30dp" >
+				<TextField id="guestof" value="" hintText="Guest of ___" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+				<TextField id="oid" class="numbers" value="" hintText="OID Number" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>
+			<TextField id="reltoclient" value="" hintText="Relation to Client" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+    		
+			<Button id="save" title="Save" onClick="save"></Button>
+			<Button id="cancel" title="Cancel" onClick="closeWindow"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

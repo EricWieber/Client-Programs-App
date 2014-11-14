@@ -1,0 +1,16 @@
+<Alloy>
+    <Window id="addwin" title="Options" opacity="0">
+    	<View backgroundColor="black" opacity="0.5"></View>
+    	<ScrollView>
+    		<Label id="emailLbl">Default Email:</Label>
+    		<TextField id="email" value="" hintText="Email" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS" />
+    		
+    		<Label id="emailLbl">Change Password:</Label>
+    		<TextField id="pass1" class="pass" value="" hintText="New Password" returnKeyType="Titanium.UI.RETURNKEY_NEXT" autocorrect="false" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE" onReturn="next" />
+    		<TextField id="pass2" class="pass" value="" hintText="Verify New Password" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocorrect="false" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE" />
+			
+			<Button id="save" title="Save" onClick="save"></Button>
+			<Button id="cancel" title="Cancel" onClick="closeWindow"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

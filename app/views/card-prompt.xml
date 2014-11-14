@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="win" title="Remove Card" opacity="0" >
+    	<View backgroundColor="black" opacity="0.7"></View>
+    	<ScrollView>
+    		<Label>Email Sent!</Label>
+    		<Label id="prompt">Do you want to remove the Card(s)?</Label>
+    		
+			<Button id="yes" title="Yes" onClick="removeCard"></Button>
+			<Button id="no" title="No" onClick="closeWindow"></Button>
+		</ScrollView>
+    </Window>
+</Alloy>

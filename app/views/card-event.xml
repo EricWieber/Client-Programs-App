@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="win2" title="Cards" onFocus="drawTable" >
+		<View id="topbar" >
+			<Label id="topTitle">Cards</Label>
+			<Button id="add" title="   Add Card   " onClick="addNewCard"/>
+			<Button id="back" title="  Events  " onClick="closeWindow" />
+		</View>
+		<TableView id="table" onClick="rowClick" backgroundImage="/Fisher-3.png" editable="true" rowHeight="80">
+			<TableViewRow />
+		</TableView>
+		<View id="bottombar" >
+			<Button id="send" title="   Send All Cards in Event   " onClick="sendAllEmail"/>
+		</View>
+	</Window>
+</Alloy>

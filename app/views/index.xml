@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="win" backgroundImage="/FisherBackground.png" layout="vertical">
+		<View id="topbar" >
+			<Label id="topTitle">Client Programs App</Label>
+			<!-- <Button id="add" title="   Options   " onClick="options"/> -->
+		</View>
+		<View id="view" layout="vertical" opacity="0" backgroundImage="/Fisher-3.png">
+			<Button id="inform" class="nav" onClick="inform" >Client Check In
+				<Label id="informlbl" bottom="25dp">Check in clients and notify the team of their arrival</Label>
+			</Button>
+			<Button id="cards" class="nav" onClick="cards">Client Info Cards
+				<Label id="cardslbl" bottom="25dp">View client info and export cards</Label>
+			</Button>
+		</View>
+	</Window>
+</Alloy>

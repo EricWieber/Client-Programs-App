@@ -1,0 +1,214 @@
+"#topbar": {
+	top: "-10dp",
+	height: "70dp",
+	width: "103%",
+	borderColor: '#fff',
+	borderRadius: "30dp",
+	borderWidth: '2dp',
+	backgroundColor: '#215525'
+},
+"Window": {
+	backgroundColor: '#163318'
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: '10dp',
+	font: {
+		fontSize: 20
+	}
+},
+"#viewFields": {
+	height: '60dp',
+	layout: 'horizontal'
+},
+"#edit": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: "10dp",
+	right: "50dp",
+	borderColor: '#fff',
+	borderRadius: '10dp',
+	backgroundColor: '#274429',
+	font: {
+		fontSize: 14
+	}
+},
+"#back": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	bottom: "10dp",
+	left: "50dp",
+	borderColor: '#fff',
+	borderRadius: '10dp',
+	backgroundColor: '#274429',
+	font: {
+		fontSize: 14
+	}
+},
+"ScrollView": {
+	layout: 'vertical',
+	backgroundColor: 'transparent',
+	color: "#fff",
+	top: '70dp'
+},
+"TextField": {
+	font: {
+		fontSize: 20
+	},
+	height: '40dp',
+	width: '40%',
+	borderRadius: '3dp',
+	paddingLeft: '5dp',
+	paddingRight: '5dp',
+	top: '20dp'
+},
+"#informBtn": {
+	top: '20dp',
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	}
+},
+"#informAllBtn": {
+	top: '20dp',
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	}
+},
+"#separator": {
+	width: '90%',
+	height: '1dp',
+	backgroundColor: '#5C705D',
+	top: '40dp',
+	bottom: '20dp'
+},
+"#sent": {
+	top: '20dp',
+	color: '#aaa'
+}
+
+///////////////////////
+
+"#namelbl": {
+	left: '25%'
+},
+"#name": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#add1lbl": {
+	left: '23%'
+},
+"#add1": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#add2lbl": {
+	left: '22%'
+},
+"#add2": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#add3lbl": {
+	left: '22%'
+},
+"#add3": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#citylbl": {
+	left: '6%'
+},
+"#city": {
+	left: '2%',
+	width: '25%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#statelbl": {
+	left: '5%'
+},
+"#state": {
+	left: '2%',
+	width: '8%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#postcodelbl": {
+	left: '5%'
+},
+"#postcode": {
+	left: '2%',
+	width: '15%',
+	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+},
+
+"#phonelbl": {
+	left: '11%'
+},
+"#phone": {
+	left: '2%',
+	width: '25%',
+	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+},
+
+"#mobilelbl": {
+	left: '5%'
+},
+"#mobile": {
+	left: '2%',
+	width: '25%',
+	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+},
+
+"#emaillbl": {
+	left: '24%'
+},
+"#email": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_EMAIL
+},
+
+"#guestoflbl": {
+	left: '10%'
+},
+"#guestof": {
+	left: '2%',
+	width: '30%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+"#oidlbl": {
+	left: '5%'
+},
+"#oid": {
+	left: '2%',
+	width: '25%',
+	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+},
+
+"#reltoclientlbl": {
+	left: '16%'
+},
+"#reltoclient": {
+	left: '2%',
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+},
+
+

@@ -1,0 +1,61 @@
+<Alloy autoStyle="true">
+	<Window id="win3" onFocus="refresh">
+		<View id="topbar" >
+			<Label id="topTitle"></Label>
+			<Button id="edit" title="   Edit   " onClick="editMe"/>
+			<Button id="back" title="  Clients  " onClick="closeWindow" />
+		</View>
+		<ScrollView id="scrollView">
+			<View id="viewFields">
+				<Label id="namelbl">Name:</Label>
+				<TextField id="name" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			</View>
+			<View id="viewFields">
+				<Label id="add1lbl">Address:</Label>
+				<TextField id="add1" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			</View>
+			<View id="viewFields">
+				<Label id="add2lbl">Address 2:</Label>
+				<TextField id="add2" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			</View>	
+			<View id="viewFields">
+				<Label id="add3lbl">Address 3:</Label>
+				<TextField id="add3" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			</View>
+			<View id="viewFields" >
+				<Label id="citylbl">City:</Label>
+				<TextField id="city" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+				<Label id="statelbl">State:</Label>
+				<TextField id="state" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_ALL" />
+				<Label id="postcodelbl">ZIP code:</Label>
+				<TextField id="postcode" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>
+			<View id="separator" />
+			<View id="viewFields">
+				<Label id="phonelbl">Phone:</Label>
+				<TextField id="phone" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+				<Label id="mobilelbl">Mobile:</Label>
+				<TextField id="mobile" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>
+			<View id="viewFields">
+				<Label id="emaillbl">Email:</Label>
+				<TextField id="email" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>	
+			<View id="separator" />
+			<View id="viewFields">
+				<Label id="guestoflbl">Guest of:</Label>
+				<TextField id="guestof" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+				<Label id="oidlbl">OID:</Label>
+				<TextField id="oid" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNext" autocorrect="true" />
+			</View>	
+			<View id="viewFields">
+				<Label id="reltoclientlbl">Relationship to client:</Label>
+				<TextField id="reltoclient" value="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			</View>
+			<View id="separator" />
+		
+			<Button id="informBtn" onClick="sendEmail" title="Send This Card" />
+			<Label id="sent" sent="false">Email not sent</Label>
+		</ScrollView>
+	</Window>
+</Alloy>

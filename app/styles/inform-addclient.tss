@@ -1,0 +1,60 @@
+"Window": {
+	backgroundColor: 'transparent'
+},
+"ScrollView": {
+	layout: 'vertical',
+	backgroundColor: '#163318',
+	height: 450,
+	width: '50%',
+	borderColor: '#fff',
+	borderRadius: 10
+},
+"#clientName": {
+	height: 40,
+	top: 40,
+	width: "80%",
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	hintText: 'Client Name'
+},
+"#numbers": {
+	height: 40,
+	top: 40,
+	width: "80%",
+	keyboardType: Titanium.UI.KEYBOARD_PHONE_PAD,
+	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	hintText: 'Contact Number(s)'
+},
+"#message": {
+	height: 40,
+	top: 40,
+	width: "80%",
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	hintText: 'Message'
+},
+"#save":{
+	top: 50,
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	}
+},
+"#cancel": {
+	top: 50,
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	},
+}

@@ -1,0 +1,48 @@
+"Window": {
+	backgroundColor: 'transparent'
+},
+"ScrollView": {
+	layout: 'vertical',
+	backgroundColor: '#163318',
+	height: "60%",
+	width: '50%',
+	borderColor: '#fff',
+	borderRadius: 10
+},
+"Label": {
+	height: Ti.UI.SIZE,
+	color: "#fff",
+	top: "30dp",
+	font: {
+		fontSize: 20
+	}
+},
+".pass": {
+	height: 40,
+	top: "20dp",
+	width: "80%",
+	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	passwordMask: true,
+	clearOnEdit: true
+},
+"#email": {
+	height: 40,
+	top: "20dp",
+	width: "80%",
+	keyboardType: Titanium.UI.KEYBOARD_EMAIL,
+	returnKeyType: Titanium.UI.RETURNKEY_DONE,
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	hintText: 'From Email'
+},
+"Button":{
+	top: 40,
+	height: Ti.UI.SIZE,
+	width: 200,
+	backgroundColor: '#ccc',
+	borderRadius: 15,
+	borderColor: '#000',
+	font: {
+		fontSize: 20
+	}
+}

@@ -1,0 +1,21 @@
+<Alloy>
+	<Window id="win4" onFocus="refresh">
+		<View id="topbar" >
+			<Label id="topTitle"></Label>
+			<Button id="edit" title="     Edit     " onClick="editMe"/>
+			<Button id="back" title="   Clients   " onClick="closeWindow" />
+		</View>
+		<ScrollView id="scrollView">
+			<TextArea id="name" text="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusNum" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<Label id="informed" class="lowerLbl" text="Message Not Sent" editable="false" />
+			<View id="separator" />
+			<Label id="numbersLbl" class="lowerLbl" text="Contact Number(s):" editable="false" />
+			<TextArea id="numbers" text="" editable="false" returnKeyType="Titanium.UI.RETURNKEY_NEXT" onReturn="focusMes" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<View id="separator" />
+			<Label id="messageLbl" class="lowerLbl" text="Contact Message:" />
+			<TextArea id="message" text=""  editable="false" returnKeyType="Titanium.UI.RETURNKEY_DONE" autocorrect="true" autocapitalization="Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES" />
+			<View id="separator" />
+			<Button id="informBtn" onClick="sendText" title="Send Text(s)" />
+		</ScrollView>
+	</Window>
+</Alloy>

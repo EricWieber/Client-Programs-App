@@ -1,0 +1,13 @@
+<Alloy>
+	<Window id="win3" onFocus="drawTable">
+		<View id="topbar">
+			<Label id="topTitle"></Label>
+			<Button id="add" title="   Add Client   " onClick="addNewClient"/>
+			<Button id="back" title="   Events   " onClick="closeWindow" />
+		</View>
+		<TableView id="table" onClick="rowClick" backgroundImage="/Fisher-3.png" editable="true" rowHeight="80">
+			<TableViewRow />
+		</TableView>
+		<Button id="add" title="Add Client" top="-50dp"></Button>
+	</Window>
+</Alloy>
