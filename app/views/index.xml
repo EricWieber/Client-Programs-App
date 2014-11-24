@@ -12,5 +12,8 @@
 				<Label id="cardslbl" bottom="25dp">View client info and export cards</Label>
 			</Button>
 		</View>
+		<View id="versionV">
+			<Label id="version" >Version 1.0</Label>
+		</View>
 	</Window>
 </Alloy>
