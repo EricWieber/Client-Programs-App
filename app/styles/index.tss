@@ -42,5 +42,17 @@
 	}
 },
 "Window": {
-	backgroundColor: '#163318'
+	backgroundColor: '#163318',
+	height: Ti.UI.FILL
+},
+"#versionV": {
+	height: Ti.UI.FILL
+},
+"#version": {
+	color: "#fff",
+	bottom: 5,
+	left: 5,
+	font: {
+		fontSize: 10
+	}
 }

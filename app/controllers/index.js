@@ -2,6 +2,7 @@ Ti.App.Properties.setString('currentWindow', "index");
 
 $.win.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
 
+$.version.text = "Version "+Titanium.App.version;
 $.win.open();
 
 $.view.animate(Titanium.UI.createAnimation({

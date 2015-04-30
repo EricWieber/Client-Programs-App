@@ -41,6 +41,7 @@ function Controller() {
     var __defers = {};
     $.__views.win = Ti.UI.createWindow({
         backgroundColor: "#163318",
+        height: Ti.UI.FILL,
         id: "win",
         backgroundImage: "/FisherBackground.png",
         layout: "vertical"
@@ -133,10 +134,28 @@ function Controller() {
         id: "cardslbl"
     });
     $.__views.cards.add($.__views.cardslbl);
+    $.__views.versionV = Ti.UI.createView({
+        height: Ti.UI.FILL,
+        id: "versionV"
+    });
+    $.__views.win.add($.__views.versionV);
+    $.__views.version = Ti.UI.createLabel({
+        height: Ti.UI.SIZE,
+        color: "#fff",
+        bottom: 5,
+        font: {
+            fontSize: 10
+        },
+        left: 5,
+        text: "Version 1.0",
+        id: "version"
+    });
+    $.__views.versionV.add($.__views.version);
     exports.destroy = function() {};
     _.extend($, $.__views);
     Ti.App.Properties.setString("currentWindow", "index");
     $.win.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+    $.version.text = "Version " + Titanium.App.version;
     $.win.open();
     $.view.animate(Titanium.UI.createAnimation({
         opacity: 1,

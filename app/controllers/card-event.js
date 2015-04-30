@@ -105,7 +105,7 @@ function sendAllEmail() {
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\">"+string[events][x].add1+",\n"+string[events][x].add2+",\n"+string[events][x].add3+"</Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\">"+string[events][x].city+"</Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\">"+string[events][x].state+"</Data></Cell>"+
-		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"Number\">"+string[events][x].postcode+"</Data></Cell>"+
+		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\">"+string[events][x].postcode+"</Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\"></Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\">"+string[events][x].phone+"</Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"/>"+
@@ -120,7 +120,7 @@ function sendAllEmail() {
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\"></Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"><Data ss:Type=\"String\"></Data></Cell>"+
 		    "<Cell ss:StyleID=\"s67\"/>"+
-		    "<Cell ss:StyleID=\"s67\"><Data ss:Type=\"Number\"></Data></Cell>"+
+		    "<Cell ss:StyleID=\"s67\"><Data ss:Type=\"String\"></Data></Cell>"+
 		    "<Cell ss:StyleID=\"s66\"/>"+
 		    "<Cell ss:StyleID=\"s83\"><Data ss:Type=\"String\"></Data></Cell>"+
 		    "<Cell ss:StyleID=\"s80\"><Data ss:Type=\"String\"></Data></Cell>"+
