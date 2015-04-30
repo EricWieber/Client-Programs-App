@@ -262,7 +262,7 @@ function sendEmail() {
 	}*/		
 	
 	emailDialog.subject = "Info Card for "+$.name.value+" from "+events;
-	emailDialog.toRecipients = ['CSJuniorAssociates@fi.com']; //[data[0]];
+	emailDialog.toRecipients = ['~CSJuniorAssociates@fi.com']; //[data[0]];
 	emailDialog.messageBody = "Attached is the info card for '"+$.name.value+"' from the '"+events+"' event";
 	emailDialog.addAttachment(fileOut);
 	emailDialog.open({

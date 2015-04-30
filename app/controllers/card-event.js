@@ -151,7 +151,7 @@ function sendAllEmail() {
 	}*/
 			
 	emailDialog.subject = "Info Cards from "+events;
-	emailDialog.toRecipients = ['CSJuniorAssociates@fi.com']; //[data[0]];
+	emailDialog.toRecipients = ['~CSJuniorAssociates@fi.com']; //[data[0]];
 	emailDialog.messageBody = "Attached are the info cards from the '"+events+"' event";
 	emailDialog.addAttachment(fileOut);
 	emailDialog.open({
