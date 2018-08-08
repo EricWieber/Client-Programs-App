@@ -36,7 +36,7 @@ var normStyle = $.createStyle({
 
 setStyle();
 
-$.win3.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+$.win3.statusBarStyle = Ti.UI.iOS.StatusBar.LIGHT_CONTENT;
 
 
 function refresh() {
@@ -45,7 +45,7 @@ function refresh() {
 }
 
 function closeWindow() {
-	$.win3.close({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	$.win3.close({transition:Ti.UI.iOS.AnimationStyle.CURL_DOWN});
 }
 
 function setStyle() {
@@ -252,17 +252,18 @@ function sendEmail() {
 		calert("Error", "Failed to export xml file");
 	}
 			
-	/*var dfile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "data.xml");
+	var dfile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "data.xml");
 	var data = [];
 	if (!dfile.exists()){
-		data[1] = "fisher123";
+		data[0] = "example@email.com";
+		data[1] = "pass";
 		dfile.write(data[0]+"|"+data[1]);
 	} else {
-		data = pass.read().text.split("|");
-	}*/		
+		data = dfile.read().text.split("|");
+	}	
 	
 	emailDialog.subject = "Info Card for "+$.name.value+" from "+events;
-	emailDialog.toRecipients = ['~CSJuniorAssociates@fi.com']; //[data[0]];
+	emailDialog.toRecipients = [data[0]];
 	emailDialog.messageBody = "Attached is the info card for '"+$.name.value+"' from the '"+events+"' event";
 	emailDialog.addAttachment(fileOut);
 	emailDialog.open({

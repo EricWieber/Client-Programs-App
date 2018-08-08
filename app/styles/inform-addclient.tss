@@ -13,7 +13,7 @@
 	height: 40,
 	top: 40,
 	width: "80%",
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT,
 	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
 	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Client Name'
@@ -22,7 +22,7 @@
 	height: 40,
 	top: 40,
 	width: "80%",
-	keyboardType: Titanium.UI.KEYBOARD_PHONE_PAD,
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_PHONE_PAD,
 	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
 	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Contact Number(s)'
@@ -31,7 +31,7 @@
 	height: 40,
 	top: 40,
 	width: "80%",
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT,
 	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
 	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Message'

@@ -13,7 +13,7 @@
 	height: 40,
 	top: 50,
 	width: "80%",
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT,
 	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
 	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Event Name',

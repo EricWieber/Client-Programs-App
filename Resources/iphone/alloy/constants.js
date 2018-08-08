@@ -2,7 +2,7 @@ var isTitanium = typeof Titanium !== 'undefined';
 var _, generatePlatformArray;
 
 if (isTitanium) {
-	_ = require('alloy/underscore')._;
+	_ = require('/alloy/underscore')._;
 } else {
 	var platforms = require('../../platforms/index');
 	_ = require('../lib/alloy/underscore')._;
@@ -28,6 +28,8 @@ exports.ALLOY_RUNTIME_DIR = 'alloy';
 exports.RESOURCES_DIR = 'Resources';
 exports.NAME_DEFAULT = 'index';
 exports.NAME_WIDGET_DEFAULT = 'widget';
+exports.NPM_WIDGET_PREFIX = 'alloy-widget-';
+exports.NPM_WIDGET_KEYWORDS = ['appcelerator', 'titanium', 'alloy', 'widget'];
 exports.GLOBAL_STYLE = 'app.tss';
 exports.ROOT_NODE = 'Alloy';
 exports.NAMESPACE_DEFAULT = 'Ti.UI';
@@ -36,30 +38,42 @@ exports.PLUGIN_NAME = 'ti.alloy';
 exports.EXPR_PREFIX = '#';
 exports.PLUGIN_FILE = 'plugin.py';
 exports.HOOK_FILE = 'alloy.js';
+exports.HOOK_FILE_CLEAN = 'deepclean.js';
 exports.MINIMUM_TI_SDK = '3.0.0';
 exports.ITEM_TEMPLATE_VAR = '__itemTemplate';
 exports.PARENT_SYMBOL_VAR = '__parentSymbol';
 exports.WIDGET_OBJECT = 'Widget';
-exports.SKIP_EVENT_HANDLING = ['Ti.UI.ListItem','Alloy.Abstract.ItemTemplate'];
+exports.SKIP_EVENT_HANDLING = ['Ti.UI.ListItem', 'Alloy.Abstract.ItemTemplate'];
 exports.ADAPTERS = ['localStorage', 'properties', 'sql'];
 exports.CONTROLLER_NODES = ['Alloy.Require', 'Alloy.Widget'];
+exports.DEFAULT_BACKBONE_VERSION = '0.9.2';
+exports.SUPPORTED_BACKBONE_VERSIONS = ['0.9.2', '1.1.2', '1.3.3'];
 
 // property names
 exports.CLASS_PROPERTY = 'classes';
 exports.APINAME_PROPERTY = 'apiName';
 exports.AUTOSTYLE_PROPERTY = 'autoStyle';
+exports.DOCROOT_MODULE_PROPERTY = 'module';
+exports.DOCROOT_BASECONTROLLER_PROPERTY = 'baseController';
 
 // Constants related to model-view binding
-exports.BIND_PROPERTIES = ['dataCollection','dataFilter','dataTransform','dataFunction'];
+exports.BIND_PROPERTIES = ['dataCollection', 'dataFilter', 'dataTransform', 'dataFunction'];
 exports.BIND_COLLECTION = 'dataCollection';
 exports.BIND_WHERE = 'dataFilter';
 exports.BIND_TRANSFORM = 'dataTransform';
 exports.BIND_FUNCTION = 'dataFunction';
 exports.BIND_TRANSFORM_VAR = '__transform';
 exports.BIND_MODEL_VAR = '$model';
-exports.MODEL_ELEMENTS = ['Alloy.Collection','Alloy.Model'];
+exports.MODEL_ELEMENTS = ['Alloy.Collection', 'Alloy.Model'];
 exports.MODEL_BINDING_EVENTS = 'fetch change destroy';
 exports.COLLECTION_BINDING_EVENTS = 'fetch destroy change add remove reset';
+
+// Constants for properties shared between ActionBar and Toolbar on Android
+exports.BACKGROUND_IMAGE = 'backgroundImage';
+exports.DISPLAY_HOME_AS_UP = 'displayHomeAsUp';
+exports.HOME_BUTTON_ENABLED = 'homeButtonEnabled';
+exports.NAVIGATION_MODE = 'navigationMode';
+exports.ON_HOME_ICON_ITEM_SELECTED = 'onHomeIconItemSelected';
 
 // Listings for supported platforms and commands
 exports.INSTALL_TYPES = ['plugin'];
@@ -112,7 +126,7 @@ exports.DIR = {
 // folders/files to exclude when copying and processing files
 // RegEx format: must escape special chars - so use \.svn not .svn
 exports.EXCLUDED_FILES = [
-	'\\.svn'
+	'\\.svn', '\\.git'
 ];
 
 // constants identifying JS reserved words
@@ -138,7 +152,8 @@ var NS_ALLOY = 'Alloy',
 	NS_TI_UI_IOS = 'Ti.UI.iOS',
 	NS_TI_UI_IPAD = 'Ti.UI.iPad',
 	NS_TI_UI_IPHONE = 'Ti.UI.iPhone',
-	NS_TI_UI_MOBILEWEB = 'Ti.UI.MobileWeb';
+	NS_TI_UI_MOBILEWEB = 'Ti.UI.MobileWeb',
+	NS_TI_UI_WINDOWS = 'Ti.UI.Windows';
 
 exports.IMPLICIT_NAMESPACES = {
 	// Alloy
@@ -165,11 +180,16 @@ exports.IMPLICIT_NAMESPACES = {
 	Option: NS_ALLOY_ABSTRACT,
 	Options: NS_ALLOY_ABSTRACT,
 	Templates: NS_ALLOY_ABSTRACT,
+	Preview: NS_ALLOY_ABSTRACT,
+	Actions: NS_ALLOY_ABSTRACT,
 
 	// Ti.Android
 	Menu: NS_TI_ANDROID,
 	MenuItem: NS_TI_ANDROID,
 	ActionBar: NS_TI_ANDROID,
+
+	// Ti.UI.Android
+	CardView: 'Ti.UI.Android',
 
 	// Ti.Map
 	Annotation: NS_TI_MAP,
@@ -180,20 +200,32 @@ exports.IMPLICIT_NAMESPACES = {
 
 	// Ti.UI.iOS
 	AdView: NS_TI_UI_IOS,
+	BlurView: NS_TI_UI_IOS,
 	CoverFlowView: NS_TI_UI_IOS,
+	DocumentViewer: NS_TI_UI_IOS,
+	LivePhotoView: NS_TI_UI_IOS,
 	NavigationWindow: NS_TI_UI_IOS,
+	SplitWindow: NS_TI_UI_IOS,
 	TabbedBar: NS_TI_UI_IOS,
-	Toolbar: NS_TI_UI_IOS,
+	PreviewContext: NS_TI_UI_IOS,
+	PreviewAction: NS_TI_UI_IOS,
+	PreviewActionGroup: NS_TI_UI_IOS,
+	MenuPopup: NS_TI_UI_IOS,
+	Stepper: NS_TI_UI_IOS,
 
 	// Ti.UI.iPad
-	DocumentViewer: NS_TI_UI_IPAD,
 	Popover: NS_TI_UI_IPAD,
-	SplitWindow: NS_TI_UI_IPAD,
 
 	// Ti.UI.iPhone
 	NavigationGroup: isTitanium && Ti.Platform.osname === 'mobileweb' ?
-		NS_TI_UI_MOBILEWEB: NS_TI_UI_IPHONE,
+		NS_TI_UI_MOBILEWEB : NS_TI_UI_IPHONE,
 	StatusBar: NS_TI_UI_IPHONE,
+
+	// Ti.UI.Windows
+	CommandBar: NS_TI_UI_WINDOWS,
+	AppBarButton: NS_TI_UI_WINDOWS,
+	AppBarToggleButton: NS_TI_UI_WINDOWS,
+	AppBarSeparator: NS_TI_UI_WINDOWS,
 
 	// Ti.UI.Window
 	LeftNavButton: 'Ti.UI.Window',
@@ -201,9 +233,15 @@ exports.IMPLICIT_NAMESPACES = {
 	LeftNavButtons: 'Ti.UI.Window',
 	RightNavButtons: 'Ti.UI.Window',
 	TitleControl: 'Ti.UI.Window',
+	WindowToolbar: 'Ti.UI.Window',
 
 	// Ti.UI.iPad.Popover
 	ContentView: 'Ti.UI.iPad.Popover',
+
+	DrawerLayout: 'Ti.UI.Android',
+	LeftView: 'Ti.UI.Android.DrawerLayout',
+	CenterView: 'Ti.UI.Android.DrawerLayout',
+	RightView: 'Ti.UI.Android.DrawerLayout',
 
 	// Table and List proxy properties
 	FooterView: '_ProxyProperty._Lists',
@@ -217,6 +255,7 @@ exports.IMPLICIT_NAMESPACES = {
 	RightButton: '_ProxyProperty',
 	LeftButton: '_ProxyProperty',
 	KeyboardToolbar: '_ProxyProperty',
+	ActionView: '_ProxyProperty'
 
 };
 
@@ -227,3 +266,7 @@ exports.SPECIAL_PROPERTY_NAMES = [
 	'onCreateOptionsMenu',
 	'onPrepareOptionsMenu'
 ];
+
+exports.COMMANDS = {
+	GENERATE: 'generate'
+};

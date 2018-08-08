@@ -13,7 +13,7 @@ $.numbers.value = string[x][y].numbers;
 $.message.value = string[x][y].message;
 refresh();
 
-$.win4.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+$.win4.statusBarStyle = Ti.UI.iOS.StatusBar.LIGHT_CONTENT;
 
 
 function refresh() {
@@ -30,7 +30,7 @@ function refresh() {
 }
 
 function closeWindow() {
-	$.win4.close({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	$.win4.close({transition:Ti.UI.iOS.AnimationStyle.CURL_DOWN});
 }
 
 function setStyle() {

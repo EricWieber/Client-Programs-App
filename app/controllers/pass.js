@@ -1,15 +1,16 @@
 Ti.App.Properties.setString('currentWindow', "index");
 
-$.passwin.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+$.passwin.statusBarStyle = Ti.UI.iOS.StatusBar.LIGHT_CONTENT;
 
-/*var dfile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "data.xml");
+var dfile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "data.xml");
 var data = [];
 if (!dfile.exists()){
-	data[1] = "fisher123";
+	data[0] = "example@email.com";
+	data[1] = "pass";
 	dfile.write(data[0]+"|"+data[1]);
 } else {
 	data = dfile.read().text.split("|");
-}*/
+}
 
 var startupAnimation = Titanium.UI.createAnimation({
     opacity: 1,
@@ -39,7 +40,7 @@ function cancel() {
 // });
 
 function submit(){
-	if ($.password.value == "fisher123"){ //data[1]){
+	if ($.password.value == data[1]){ //data[1]){
 		Ti.App.Properties.setString('currentWindow', "cards");
 		closeWindow();
 	} else {

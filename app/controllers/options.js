@@ -4,7 +4,8 @@ Ti.App.Properties.setString('currentWindow', "options");
 var dfile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "data.xml");
 var data = [];
 if (!dfile.exists()){
-	data[1] = "fisher123";
+	data[0] = "example@email.com";
+	data[1] = "pass";
 	dfile.write(data[0]+"|"+data[1]);
 } else {
 	data = dfile.read().text.split("|");
@@ -35,7 +36,7 @@ function next(){
 
 function save(){		
 	data[0] = $.email.value;
-	if ($.pass1.value == $.pass2.value){
+	if ($.pass1.value == $.pass2.value && $.pass1.value != ""){
 		data[1] = $.pass2.value;
 	}
 	

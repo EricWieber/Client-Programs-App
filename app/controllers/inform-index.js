@@ -22,26 +22,26 @@ str["Big Event"][3] = { 'name': 'Added', 'numbers':'1234567890', 'message':'Adde
 
 
 //Ti.App.Properties.setString('Data', JSON.stringify(string) );
-$.win2.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+$.win2.statusBarStyle = Ti.UI.iOS.StatusBar.LIGHT_CONTENT;
 
 drawTable();
 
-var ind=Titanium.UI.createProgressBar({
-	width:200,
-	height:50,
-	min:0,
-	max:1,
-	value:0,
-	style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
-	top:10,
-	message:'Downloading...',
-	font:{fontSize:12, fontWeight:'bold'},
-	color:'#fff',
-	backgroundColor: '#163318',
-	borderColor: '#fff',
-	borderRadius: '10'
-});
-$.win2.add(ind);
+// var ind=Titanium.UI.createProgressBar({
+// 	width:200,
+// 	height:50,
+// 	min:0,
+// 	max:1,
+// 	value:0,
+// 	style:Titanium.UI.iOS.ProgressBarStyle.PLAIN,
+// 	top:10,
+// 	message:'Loading...',
+// 	font:{fontSize:12, fontWeight:'bold'},
+// 	color:'#fff',
+// 	backgroundColor: '#163318',
+// 	borderColor: '#fff',
+// 	borderRadius: '10'
+// });
+// $.win2.add(ind);
 
 // var startupAnimation = Titanium.UI.createAnimation({
     // opacity: 1,
@@ -52,7 +52,7 @@ $.win2.add(ind);
 //$.table.animate(startupAnimation);
 
 function closeWindow() {
-	$.win2.close({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	$.win2.close({transition:Ti.UI.iOS.AnimationStyle.CURL_DOWN});
 }
 
 function drawTable(e) {
@@ -74,7 +74,7 @@ function rowClick(e) {
 		file: file,
     	events: e.rowData.name
     }).getView();
-    win3.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+    win3.open({transition:Ti.UI.iOS.AnimationStyle.CURL_UP});
 }
 
 function addNewEvent() {
@@ -86,26 +86,26 @@ Ti.App.addEventListener('update', function(event) {
  	drawTable();
 });
 
-/////////////////////
+// /////////////////////
 
 
-function loadEvents() {
-	ind.show();
-	var xhr = Titanium.Network.createHTTPClient({
-		onload: function() {
-			Ti.App.fireEvent('downloaded', {text:xhr.file.read().text});
-		},
-		ondatastream: function(e) {
-			ind.value = e.progress;
-		},
-		timeout: 20000
-	});
-	xhr.open('GET','http://textfiles.com/uploads/2ktips.txt');
-	xhr.file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'2ktips.txt');
-	xhr.send();
-}
+// function loadEvents() {
+// 	ind.show();
+// 	var xhr = Titanium.Network.createHTTPClient({
+// 		onload: function() {
+// 			Ti.App.fireEvent('downloaded', {text:xhr.file.read().text});
+// 		},
+// 		ondatastream: function(e) {
+// 			ind.value = e.progress;
+// 		},
+// 		timeout: 20000
+// 	});
+// 	xhr.open('GET','http://textfiles.com/uploads/2ktips.txt');
+// 	xhr.file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'2ktips.txt');
+// 	xhr.send();
+// }
 
-Ti.App.addEventListener('downloaded', function(event) {
-	ind.hide();
-	alert(event.text.substr(1,1000));
-});
+// Ti.App.addEventListener('downloaded', function(event) {
+// 	ind.hide();
+// 	alert(event.text.substr(1,1000));
+// });

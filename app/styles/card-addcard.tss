@@ -20,7 +20,7 @@
 	borderRadius: '3dp',
 	paddingLeft: '5dp',
 	paddingRight: '5dp',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT,
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT,
 	returnKeyType: Titanium.UI.RETURNKEY_NEXT,
 	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 },
@@ -38,20 +38,20 @@
 "#postcode": {
 	width: "20%",
 	left: "5%",
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 "#phone": {
 	width: "37.5%",
 	left: "10%",
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 "#mobile": {
 	width: "37.5%",
 	left: "5%",
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 "#email": {
-	keyboardType: Titanium.UI.KEYBOARD_EMAIL
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_EMAIL
 },
 "#guestof": {
 	width: "37.5%",
@@ -60,7 +60,7 @@
 "#oid": {
 	width: "37.5%",
 	left: "5%",
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 "#save":{
 	top: '50dp',

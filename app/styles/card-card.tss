@@ -105,7 +105,7 @@
 },
 "#name": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#add1lbl": {
@@ -113,7 +113,7 @@
 },
 "#add1": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#add2lbl": {
@@ -121,7 +121,7 @@
 },
 "#add2": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#add3lbl": {
@@ -129,7 +129,7 @@
 },
 "#add3": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#citylbl": {
@@ -138,7 +138,7 @@
 "#city": {
 	left: '2%',
 	width: '25%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#statelbl": {
@@ -147,7 +147,7 @@
 "#state": {
 	left: '2%',
 	width: '8%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#postcodelbl": {
@@ -156,7 +156,7 @@
 "#postcode": {
 	left: '2%',
 	width: '15%',
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 
 "#phonelbl": {
@@ -165,7 +165,7 @@
 "#phone": {
 	left: '2%',
 	width: '25%',
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 
 "#mobilelbl": {
@@ -174,7 +174,7 @@
 "#mobile": {
 	left: '2%',
 	width: '25%',
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 
 "#emaillbl": {
@@ -182,7 +182,7 @@
 },
 "#email": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_EMAIL
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_EMAIL
 },
 
 "#guestoflbl": {
@@ -191,7 +191,7 @@
 "#guestof": {
 	left: '2%',
 	width: '30%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 "#oidlbl": {
@@ -200,7 +200,7 @@
 "#oid": {
 	left: '2%',
 	width: '25%',
-	keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD
 },
 
 "#reltoclientlbl": {
@@ -208,7 +208,7 @@
 },
 "#reltoclient": {
 	left: '2%',
-	keyboardType: Titanium.UI.KEYBOARD_DEFAULT
+	keyboardType: Titanium.UI.KEYBOARD_TYPE_DEFAULT
 },
 
 

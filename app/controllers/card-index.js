@@ -20,7 +20,7 @@ if (!file.exists()){
 }
 
 //Ti.App.Properties.setString('Data', JSON.stringify(string) );
-$.win2.statusBarStyle = Ti.UI.iPhone.StatusBar.LIGHT_CONTENT;
+$.win2.statusBarStyle = Ti.UI.iOS.StatusBar.LIGHT_CONTENT;
 
 drawTable();
 
@@ -31,7 +31,7 @@ drawTable();
 // }));
 
 function closeWindow() {
-	$.win2.close({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	$.win2.close({transition:Ti.UI.iOS.AnimationStyle.CURL_DOWN});
 	Ti.App.Properties.setString('currentWindow', "index");
 }
 
@@ -54,7 +54,7 @@ function rowClick(e) {
 		file: file,
     	row: e.rowData
     }).getView();
-    win3.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+    win3.open({transition:Ti.UI.iOS.AnimationStyle.CURL_UP});
 }
 
 function addNewEvent() {
